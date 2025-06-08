@@ -1,0 +1,73 @@
+.StartPage {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //justify-content: center;
+  //gap: 170px;
+  height: 100%;
+  //padding: 160px 0 50px;
+  .inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+
+    padding: 15px 0;
+    .clue {
+      height: 62px;
+      width: 62px;
+      min-height: 62px;
+      min-width: 62px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .invalidMessage {
+      position: absolute;
+      top: -5px;
+      left: 0;
+
+      color: #ff7f7f;
+    }
+    &.oneItem {
+      //flex-direction: column;
+      margin-bottom: 0.36em;
+    }
+    @media (max-width: 600px) {
+      gap: 10px;
+    }
+  }
+  .textInput {
+    padding: 0.36em 0.63em;
+    width: 100%;
+    height: 70px;
+
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--txt-input-primary);
+
+    background-color: var(--bg-input-primary);
+    border: 1px solid var(--border-input-primary);
+    border-radius: 11px;
+    @media (max-width: 800px) {
+      font-size: 24px;
+    }
+  }
+  .employeeName {
+    padding: 0.36em 0.63em;
+    margin-bottom: 3.0em;
+    width: 100%;
+    height: 70px;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--txt-color-primary);
+    // background-color: var(--bg-input-primary);
+    // border: 1px solid var(--border-input-primary);
+    // border-radius: 11px;
+  }
+}
