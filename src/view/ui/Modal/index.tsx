@@ -1,7 +1,7 @@
 import s from './index.module.scss';
 import { useEffect } from "react";
 
-export const Modal = ({ isVisible = false, title, content, footer, onClose, notClose }: any) => {
+export const Modal = ({ isVisible = false, title, content, footer, onClose, notClose, children }: any) => {
     const keydownHandler = ({ key } : any) => {
         switch (key) {
             case 'Escape':
@@ -32,6 +32,7 @@ export const Modal = ({ isVisible = false, title, content, footer, onClose, notC
                 </div>
                 <div className={s.modalBody}>
                     <div className={s.modalContent}>{content}</div>
+                    {children}
                 </div>
                 {footer && <div className={s.modalFooter}>{footer}</div>}
             </div>

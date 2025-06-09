@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './index.module.scss'
 import classNames from "classnames";
 

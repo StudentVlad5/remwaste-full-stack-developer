@@ -10,14 +10,13 @@ export const CheckIdProvider = ({
     const location = useLocation();
 
     useEffect(() => {
-        const application_number = localStorage.getItem('application_number');
-        const id = localStorage.getItem("id");
+        const application_number = 1;
+  
+        if (!application_number ) navigate('/')
 
-        if (!application_number || !id ) navigate('/')
-
-        if (application_number && id && location.pathname === '/') {
-            navigate('/1')
-        }
+        // if (application_number && location.pathname === '/') {
+        //     navigate('/1')
+        // }
 
     }, [navigate, location.pathname]);
 

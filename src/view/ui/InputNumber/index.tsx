@@ -6,6 +6,7 @@ type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onC
 
 export const InputNumber = ({
     title,
+    name,
     subtitle,
     className,
     onChange,
@@ -15,9 +16,10 @@ export const InputNumber = ({
 }: {
     className?: string
     title?: string
+    name?: string
     subtitle?: string
     onChange?: (e: any) => void
-    value?: string,
+    value?: number | string,
     invalidMessage?: string
 } & HTMLInputProps) => {
 
@@ -38,7 +40,7 @@ export const InputNumber = ({
                 { title && <span className={s.title}>{ title } <span className={s.invalidMessage}>{ invalidMessage }</span> </span> }
                 { subtitle && <span className={s.subtitle}>{ subtitle }</span> }
             </div>
-            <input className={s.input} { ...otherProps } type="text" onChange={onChange} value={value ?? undefined} onKeyPress={validate}/>
+            <input className={s.input} { ...otherProps } type="text" onChange={onChange} value={value ?? undefined} onKeyPress={validate} name={name}/>
         </div>
     );
 };

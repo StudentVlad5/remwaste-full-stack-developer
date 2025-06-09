@@ -1,0 +1,70 @@
+@use "../../../common/styles/mixins" as *;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+  padding: 1rem 2rem;
+  list-style: none;
+
+  li {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      img {
+        margin-bottom: 0.25rem;
+      }
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.item a {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.textGold {
+  color: var(--txt-color-gold);
+}
+.textGray {
+  color: var(--txt-input-primary);
+}
+@media (max-width: $viewpoint-phone) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    &::before {
+      display: none;
+    }
+
+    li {
+      flex-direction: row;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        img {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

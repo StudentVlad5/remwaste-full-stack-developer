@@ -1,0 +1,57 @@
+.ProductCard {
+  background-color: var(--bg-input-primary);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    border-radius: 0.75rem;
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .Title {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .SubText {
+    font-size: 0.875rem;
+    color: var(--txt-input-primar);
+  }
+
+  .Price {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .Status {
+    font-size: 0.875rem;
+
+    .Yes {
+      color: #16a34a;
+      font-weight: 600;
+    }
+
+    .No {
+      color: #dc2626;
+      font-weight: 600;
+    }
+  }
+}
+.btnSkip {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px 40px;
+  height: auto;
+}

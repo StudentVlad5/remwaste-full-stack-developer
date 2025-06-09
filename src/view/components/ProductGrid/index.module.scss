@@ -1,0 +1,30 @@
+@use "../../../common/styles/mixins" as *;
+.GridContainer {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  height: 100%;
+
+  .FilterPanel {
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+
+    // Default: 1 column
+    grid-template-columns: 1fr;
+    padding-bottom: 250px;
+
+    // Tablet
+    @media (min-width: $viewpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // Desktop
+    @media (min-width: $viewpoint-desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
