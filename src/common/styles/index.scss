@@ -1,24 +1,25 @@
-@use "./mixins" as *;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-@import "./reset";
-@import "./variable";
+@use "./reset" as reset;
+@use "./variable" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 body {
   display: flex;
   min-height: 100vh;
   height: 100%;
 
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
 
-  background-color: #D0CECE;
+  background-color: var(--bg-primary);
 }
 #root {
   width: 100%;
 }
 
-input, textarea {
-  &:focus, &:active {
-    outline: 2px solid #3800EB;
+input,
+textarea {
+  &:focus,
+  &:active {
+    outline: 2px solid #3800eb;
   }
 }
