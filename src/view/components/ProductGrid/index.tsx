@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { ProductCard } from "../ProductCard";
 import { FilterPanel } from "../FilterPanel";
 import { RootState } from "../../../store/ReduxStore";
-import styles from "./index.module.scss";
 import { useSelector } from "react-redux";
 import Footer from "../Footer";
+import styles from "./index.module.scss";
 
 // Assuming quizList is an array, infer its item type from RootState
 type Product = RootState["QuizReducer"]["quizList"][number];

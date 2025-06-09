@@ -44,7 +44,7 @@ const HorizontalSideBar = () => {
         >
           <Link to={item.link} title={item.title}>
             <img
-              src={item.id <= count ? item.imgGold : item.imgGray}
+              src={item.id <= count ? item.imgGold.toString() : item.imgGray.toString()}
               alt={item.title}
               width={25}
               height={25}

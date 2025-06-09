@@ -1,5 +1,3 @@
-import s from './index.module.scss';
-
 import {Outlet} from "react-router-dom";
 import { Header } from "../../components/Header";
 import {useAppSelector, useThunks} from "../../../common/helpers/reduxHook";
@@ -8,6 +6,7 @@ import Skeleton from "../../ui/Skeleton";
 import {useEffect} from "react";
 import {QuizThunks} from "../../../store/thunks/quiz.thunks";
 import HorizontalSideBar from '../../components/HorizontalSideBar';
+import s from "./index.module.scss";
 
 export const AppLayout = () => {
     const { getQuizListThunk } = useThunks(QuizThunks);
