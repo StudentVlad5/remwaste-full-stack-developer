@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { QuizActions } from "../../../store/reducers/quiz.reducer";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import s from "./index.module.scss";
 import { useNavigate } from "react-router";
 import { Button } from "../../ui/Button";
@@ -115,7 +115,6 @@ const Footer = ({ orderedItems }: FooterProps) => {
           </button>
         </div>
       </div>}
-      <ToastContainer />
     </footer>
   );
 };

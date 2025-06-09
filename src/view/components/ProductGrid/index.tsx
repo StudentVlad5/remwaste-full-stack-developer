@@ -56,8 +56,6 @@ export const ProductGrid = () => {
         : [...prev, id]
     );
   };
-
-console.log(orderedItems)
   return (
     <div className={styles.GridContainer}>
       <FilterPanel filters={filters} setFilters={setFilters} />

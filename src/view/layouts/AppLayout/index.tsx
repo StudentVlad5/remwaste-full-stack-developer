@@ -6,6 +6,7 @@ import Skeleton from "../../ui/Skeleton";
 import {useEffect} from "react";
 import {QuizThunks} from "../../../store/thunks/quiz.thunks";
 import HorizontalSideBar from '../../components/HorizontalSideBar';
+import { ToastContainer } from 'react-toastify';
 import s from "./index.module.scss";
 
 export const AppLayout = () => {
@@ -20,6 +21,7 @@ export const AppLayout = () => {
         <div className={s.App}>
             { quizIsLoading && <Skeleton/> }
             <Header/>
+            <ToastContainer />
             <HorizontalSideBar/>
             <Outlet/>
         </div>

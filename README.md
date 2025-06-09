@@ -1,46 +1,129 @@
-# Getting Started with Create React App
+# ♻️ Rew-Waste — Order Placement Interface (MVP)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Rew-Waste
+is a front-end MVP project developed using modern web technologies including __React, JavaScript, TypeScript, Node.js, Vite, Vercel, HTML, SCSS, and CSS__.
 
-## Available Scripts
+The purpose of the project is to build the foundation for a __waste collection service__ order system in a test environment, providing a responsive and user-friendly interface across all screen types — mobile, tablet, and desktop.
 
-In the project directory, you can run:
+## ⚙️ Tech Stack
 
-### `npm start`
+- __Frontend__: React, TypeScript, Vite, SCSS Modules, HTML, CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- __State Management__: Redux Toolkit
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- __Routing__: React Router v7
 
-### `npm test`
+- __Animations__: Framer Motion
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- __Utilities__: classnames, react-toastify
 
-### `npm run build`
+- __Dev Tools__: ESLint, Typed SCSS Modules
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📀 Project Architecture
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+__SCSS structure__ uses:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- @use for scoped style imports
 
-### `npm run eject`
+- centralized variables (_variable.scss)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- shared mixins (_mixins.scss)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- a custom reset.scss for base normalization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- SCSS files are structured for easy maintainability with includePaths
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+All constants and reusable configuration values are stored in config.ts.
 
-## Learn More
+## 🧱 App Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- __Header__: Logo, Registration/Login buttons (scalable to include Language Toggle and Nav Menu)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- __ToastContainer__: Positioned for global user notifications
+
+- __HorizontalSideBar__: Displays and controls the step-by-step order process (controlled via React Router)
+
+- __Route Steps__:
+```bash
+[
+  '/',                  // Step 1: Postcode — under construction
+  'waste_type/',        // Step 2: Waste Type — under construction
+  'select_skip/',       // ✅ Step 3: Select Skip — IMPLEMENTED
+  'permit_check/',      // Step 4: Permit Check — under construction
+  'choose_date/',       // Step 5: Choose Date — under construction
+  'payment/'            // Step 6: Payment — under construction
+]
+```
+Each step is wrapped in a PageWrapper and controlled by a CheckIdProvider.
+
+- __Footer__: Contains the final confirmation section of the order process.
+
+## 🧰 Features
+
+- ✅ __Select Skip Page__: Fully implemented with dynamic content and filters.
+
+- 🔲 __Other pages__: Placeholder components (UnderConstruction) used.
+
+- 🔍 __Product Filter__: Basic filtering logic for product listings. Easily extendable with:
+
+          -  Pagination
+
+          -  Sorting
+
+          -  Category-based filters
+
+- ⚛️ __Animations__: Smooth transitions using framer-motion
+
+- 🖼️ __Performance__: Images use lazy-loading for optimized performance
+
+## ♻️ Reusable UI Components
+
+- Button
+
+- CheckBox
+
+- RadioButton
+
+- Skeleton
+
+- InputNumber
+
+- InputTextByList
+
+- Modal
+
+- PageWrapper
+
+These components are designed with scalability in mind and follow DRY principles.
+
+## 📦 State Management
+
+- Global state is managed using __Redux Toolkit__
+
+- Data from the server (e.g., skips/products) and user interactions (e.g., selected items) are stored in Redux
+
+- The store is designed to be extended with:
+
+            -   User Authentication
+
+            -   User Personal Data
+
+            -   Permissions, etc.
+
+## 🧰 Future Enhancements
+
+- Full form validation and step validation
+
+- Integration with a backend for payment and order tracking
+
+- Use of a component library such as Tailwind or MUI is recommended for production to speed up development and maintain consistency
+
+- Even in its current state, the project is highly scalable and designed for easy feature extension.
+
+## 🤝 Collaboration
+
+This is a fascinating project with great potential for real-world use.If you're interested in further development or collaboration, feel free to reach out:
+
+🌐 [Vlad Popov](vlad-popov.vercel.app)
+
+I’d be happy to contribute to the implementation.
